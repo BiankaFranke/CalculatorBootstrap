@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator with Bootstrap - First try with single functions</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <main class="bg-dark">
+      <section id="firstSec">
+        <div id="output">
+            <div class="text-light text-opacity-50 fs-4" id="resultHistory">
+            </div>
+            <div class="text-light fs-1" id="result"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <section id="secondSec">
+          <div id="operatorsOne">
+            <button type="button" class="btn btn-warning btn-lg mt-4" id="keyMulti" value="*" onclick="output('*')">&times;</button>
+            <button type="button" class="btn btn-warning btn-lg mt-4" id="keyDiv" value="/" onclick="output('/')">&divide;</button>
+            <button type="button" class="btn btn-warning btn-lg mt-4" id="keyMinus" value="-" onclick="output('-')">-</button>
+            <button type="button" class="btn btn-warning btn-lg mt-4" id="keyPlus" value="+" onclick="output('+')">+</button>
+          </div>
+          <div id="keys">
+            <div>
+              <button type="button" id="keyDot" value="." class="btn btn-secondary btn-lg mt-4" onclick="output('.')">
+                  &sdot;
+              </button>
+              <button type="button" id="key9" value="9" class="btn btn-secondary btn-lg mt-4" onclick="output('9')">
+                9
+              </button>
+              <button type="button" id="key8" value="8" class="btn btn-secondary btn-lg mt-4" onclick="output('8')">
+                8
+              </button>
+              <button type="button" id="key7" value="7" class="btn btn-secondary btn-lg mt-4" onclick="output('7')" >
+                7
+              </button>
+            </div>
+            <div>
+              <button type="button" id="key6" value="6"class="btn btn-secondary btn-lg mt-4" onclick="output('6')">
+                6
+              </button>
+              <button type="button" id="key5" value="5" class="btn btn-secondary btn-lg mt-4" onclick="output('5')">
+                5
+              </button>
+              <button type="button" id="key4" value="4" class="btn btn-secondary btn-lg mt-4" onclick="output('4')" >
+                4
+              </button>
+              <button type="button" id="key3" value="3" class="btn btn-secondary btn-lg mt-4" onclick="output('3')">
+                3
+              </button>
+            </div>
+            <div id="operatorsTwo">
+              <div>
+                <button type="button" id="key2" value="2" class="btn btn-secondary btn-lg mt-4" onclick="output('2')">
+                  2
+                </button>
+                <button type="button" id="key1" value="1" class="btn btn-secondary btn-lg mt-4" onclick="output('1')">
+                  1
+                </button>
+                <button type="button" id="key0" value="0" class="btn btn-secondary btn-lg mt-4" onclick="output('0')">
+                  0
+                </button>
+                <button type="button" id="equal" value="=" class="btn btn-success btn-lg mt-4" onclick="calculate(event)">
+                  =
+                </button>
+              </div>
+              <div id="operatorsThree">
+                  <button type="button" id="&larr;" value="&larr;" class="btn btn-danger btn-lg mt-4 mb-3" onclick="back(event)">&larr;</button>
+                  <button type="button" id="c" value="c" class="btn btn-danger btn-lg mt-4 mb-3" onclick="del(event)">
+                  c
+                  </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
